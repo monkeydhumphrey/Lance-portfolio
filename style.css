@@ -1,0 +1,107 @@
+/*
+  style.css: all the styling for my portfolio.
+  Every block below is a TODO for me to write. The values come from PLAN.md.
+  Order: variables → base → layout helpers → sections from top to bottom → mobile → polish.
+*/
+
+
+/* TODO (Step 2): CSS VARIABLES in :root
+   Colours:
+     page background   #F1F4F7
+     main text         #1D2A2B
+     muted text        #4E5D5E
+     card body text    #3C4A4B
+     teal              #2F6B6E
+     dark teal         #1F4A4C
+     light teal tint   #DCEAE8
+     amber dot         #D69E2E
+     amber text        #8A5A12
+     light amber tint  #FBEFD9
+     paper             #FBFCFD
+     divider           #E8ECEF
+   Fonts:
+     headings  'Fraunces', Georgia, serif
+     body      'Inter', system-ui, sans-serif
+   Shadows:
+     project card   6px 6px 0 rgba(29, 42, 43, 0.85)
+     about card     8px 8px 0 rgba(29, 42, 43, 0.85)
+*/
+
+
+/* TODO (Step 2): BASE
+   - box-sizing: border-box on everything
+   - body: margin 0, background, text colour, body font
+   - headings use the heading font
+*/
+
+
+/* TODO (Step 2): CONTAINER helper class
+   - max-width 1160px, centred, 24px padding left and right
+*/
+
+
+/* TODO (Step 3): HEADER
+   - flexbox, "LG" left, links right, space-between, wraps on small screens
+   - plain links, no filled button
+*/
+
+
+/* TODO (Step 4): HERO
+   - name: clamp(80px, 12.5vw, 176px), line-height 0.92, letter-spacing -0.03em
+   - tagline: 26px, weight 500
+   - sub-line: 18px, muted
+   - buttons: filled teal + white outline, 6px corners
+   - big vertical padding (about 130px)
+*/
+
+
+/* TODO (Step 5): BUILT & BUILDING
+   - the teal & span (Inter, 600)
+   - grid: repeat(auto-fit, minmax(260px, 1fr)), gap 20px
+   - paper cards: background, 1px dark border, 3px corners, hard shadow
+   - status dot: 8px circle + 3px ring (teal for In progress, amber for Planned)
+   - push the links row to the bottom of each card
+*/
+
+
+/* TODO (Step 6): PHOTO WRAPPER + FADE
+   - background-image: url("images/rockies-ten-peaks.jpg")
+   - background-size: cover; background-position: center 70%
+   - fade element: height 160px, linear-gradient(to bottom, #F1F4F7, transparent)
+*/
+
+
+/* TODO (Step 7): ABOUT CARD
+   - paper card with the bigger hard shadow
+   - photo circle: 84px, border-radius 50%, 1px dark border, object-fit cover
+   - small uppercase labels: 13px, 600, letter-spacing 0.06em, muted
+   - teal dots between skills, teal icons on hobbies
+   - about 380px of space below the card so the peaks show
+*/
+
+
+/* TODO (Step 8): CONTACT BLOCK
+   - background rgba(16, 26, 28, 0.74), no blur
+   - border 1px solid rgba(241, 244, 247, 0.28)
+   - hard shadow 8px 8px 0 rgba(8, 14, 16, 0.55)
+   - heading #F1F4F7, paragraph #D3DBDC
+   - straw hat about 46 × 28px, sitting on the text baseline
+   - email button: #8FC7C9 with #14201F text; LinkedIn/GitHub as outline buttons
+*/
+
+
+/* TODO (Step 8): FOOTER STRIP
+   - same dark see-through style, small text, space-between
+*/
+
+
+/* TODO (Step 9): MOBILE
+   - media query for narrow screens: stack things, shrink padding, wrap the nav
+*/
+
+
+/* TODO (Step 10): POLISH
+   - hover and :focus-visible styles for links and buttons
+   - optional: scroll reveal on the About card (animation-timeline: view())
+   - turn animations off inside @media (prefers-reduced-motion: reduce)
+*/
