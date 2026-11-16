@@ -25,37 +25,43 @@
 
 
 
-<!-- TODO (Step 3): HEADER
+     <!-- TODO (Step 3): HEADER
      - "LG" on the left, linking to the top of the page (aria-label="Lance Gomez, home")
      - nav links on the right: Projects (#projects), About (#about), Resume (resume.pdf), Contact (#contact)
 -->
 
-<header>
+     <header>
+          <div class="container">
 
-</header>
+          </div>
+     </header>
 
 
-<main>
+     <main>
 
 
-<!-- TODO (Step 4): HERO (give it id="top")
+          <!-- TODO (Step 4): HERO (give it id="top")
      - big name: Lance Gomez
      - tagline: Part code, part wandering, mostly curiosity.
      - sub-line: BCIS student at Mount Royal University in Calgary, looking for a Spring or Summer 2027 internship.
      - buttons: "See my work" (to #projects) and "Resume" (to resume.pdf)
 -->
-<section id="top">
+          <section id="top">
 
-     <h1>Lance Gomez</h1>
-     <p class="tagline">Part code, part wandering, mostly curiosity.</p>
-     <p class="sub-line">BCIS student at Mount Royal University in Calgary, looking for a Spring or Summer 2027 internship.</p>
-     <div class="hero-buttons">
-          <a href="#projects" class="button">See my work</a>
-          <a href="resume.pdf" class="button">Resume</a>
-     </div>
-</section>
+               <div class="container">
+                    <h1>Lance Gomez</h1>
+                    <p class="tagline">Part code, part wandering, mostly curiosity.</p>
+                    <p class="sub-line">BCIS student at Mount Royal University in Calgary, looking for a Spring or
+                         Summer
+                         2027 internship.</p>
+                    <div class="hero-buttons">
+                         <a href="#projects" class="button">See my work</a>
+                         <a href="resume.pdf" class="button">Resume</a>
+                    </div>
+               </div>
+          </section>
 
-<!-- TODO (Step 5): BUILT & BUILDING (id="projects")
+          <!-- TODO (Step 5): BUILT & BUILDING (id="projects")
      - heading: Built & building, with the & wrapped in a <span> for the teal style
      - 3 project cards (<article>), each with:
          status (dot + text), name, one-line description, tech stack, links
@@ -63,29 +69,32 @@
      - Card 2: Baskemtball · Planned · Coming soon
      - Card 3: [Web 2 project] · In progress · View code, Live demo
 -->
-<section id="projects">
-     <h2>Built <span>&</span> building</h2>
+          <section id="projects">
+               <div class="container">
+                    <h2>Built <span>&</span> building</h2>
 
-     <div class="project-cards">
+                    <div class="project-cards">
 
-          <article class="project-card">
+                         <article class="project-card">
 
-               <div class="status in-progress"><span class="dot"></span> In progress</div>
-               <h3>This website</h3>
-               <p>A portfolio website to showcase my work and skills.</p>
-               <p class="tech-stack">HTML · CSS · JavaScript</p>
-               <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">View code</a>
-          </article>
+                              <div class="status in-progress"><span class="dot"></span> In progress</div>
+                              <h3>This website</h3>
+                              <p>A portfolio website to showcase my work and skills.</p>
+                              <p class="tech-stack">HTML · CSS · JavaScript</p>
+                              <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">View
+                                   code</a>
+                         </article>
 
-</div>
-</section>
-<!-- TODO (Step 6): PHOTO WRAPPER (the fade + the Ten Peaks background)
+                    </div>
+               </div>
+          </section>
+          <!-- TODO (Step 6): PHOTO WRAPPER (the fade + the Ten Peaks background)
      - one wrapper element around About, Contact and the footer
      - first thing inside it: an empty element for the gradient fade (aria-hidden="true")
 -->
 
 
-<!-- TODO (Step 7): ABOUT ME (id="about"), inside the photo wrapper
+          <!-- TODO (Step 7): ABOUT ME (id="about"), inside the photo wrapper
      - heading row: round photo of me + "About me" + "3rd year BCIS · Calgary, AB"
      - my paragraph (write it in my own words)
      - "I work with": SQL · PHP · JavaScript · HTML & CSS · SAP
@@ -94,51 +103,55 @@
 -->
 
 
-<!--- REPLACE THE TEXT BECAUSE NOT RIGHT -->
-     <section id="about">
+          <!--- REPLACE THE TEXT BECAUSE NOT RIGHT -->
+          <section id="about">
 
-          <div class="about-heading">
-               <img src="images/lance-gomez.jpg" alt="Lance Gomez" class="round-photo">
-               <h2>About me</h2>
-               <p class="location">3rd year BCIS · Calgary, AB</p>
-          </div>
-          <p class="about-paragraph">I am a third-year BCIS student at Mount Royal University in Calgary, Alberta. I have a passion for technology and enjoy exploring new programming languages and frameworks. My goal is to leverage my skills to create innovative solutions that make a positive impact.</p>
-          <p class="skills">I work with: SQL · PHP · JavaScript · HTML & CSS · SAP</p>
-          <p class="hobbies">Off the clock: Above the treeline, Music, Film, Video games, Fantasy basketball</p>
-          <a href="resume.pdf" class="button">Full skills & experience on my resume →</a>      
-     </section>
-     
-<!-- TODO (Step 8): LOOKING FOR MY NEXT CREW (id="contact"), inside the photo wrapper
+               <div class="about-heading">
+                    <img src="images/lance-gomez.jpg" alt="Lance Gomez" class="round-photo">
+                    <h2>About me</h2>
+                    <p class="location">3rd year BCIS · Calgary, AB</p>
+               </div>
+               <p class="about-paragraph">I am a third-year BCIS student at Mount Royal University in Calgary, Alberta.
+                    I have a passion for technology and enjoy exploring new programming languages and frameworks. My
+                    goal is to leverage my skills to create innovative solutions that make a positive impact.</p>
+               <p class="skills">I work with: SQL · PHP · JavaScript · HTML & CSS · SAP</p>
+               <p class="hobbies">Off the clock: Above the treeline, Music, Film, Video games, Fantasy basketball</p>
+               <a href="resume.pdf" class="button">Full skills & experience on my resume →</a>
+          </section>
+
+          <!-- TODO (Step 8): LOOKING FOR MY NEXT CREW (id="contact"), inside the photo wrapper
      - heading with images/straw-hat.svg instead of a period (alt="" or a short aria-label)
      - my contact sentence
      - buttons: Email (mailto:), LinkedIn, GitHub
--->  
+-->
 
 
-<!--REPLACE THE TEXT BECAUSE NOT RIGHT -->
-     <section id="contact">
-          <h2>Looking for my next crew <img src="images/straw-hat.svg" alt="" class="straw-hat"></h2>
-          <p>If you're looking for a passionate and dedicated BCIS student to join your team, I'd love to hear from you! Please feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
-          <div class="contact-buttons">
-               <a href="mailto:>?" class="button">Email</a>
-               <a href="https://www.linkedin.com/in/lancegomez/" target="_blank" class="button">LinkedIn</a>
-               <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">GitHub</a>
-          </div>
-     </section>
+          <!--REPLACE THE TEXT BECAUSE NOT RIGHT -->
+          <section id="contact">
+               <h2>Looking for my next crew <img src="images/straw-hat.svg" alt="" class="straw-hat"></h2>
+               <p>If you're looking for a passionate and dedicated BCIS student to join your team, I'd love to hear from
+                    you! Please feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
+               <div class="contact-buttons">
+                    <a href="mailto:>?" class="button">Email</a>
+                    <a href="https://www.linkedin.com/in/lancegomez/" target="_blank" class="button">LinkedIn</a>
+                    <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">GitHub</a>
+               </div>
+          </section>
 
-<!-- TODO (Step 8): FOOTER, inside the photo wrapper
+          <!-- TODO (Step 8): FOOTER, inside the photo wrapper
      - © 2026 Lance Gomez · Calgary, AB
      - Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park
 -->
 
-<footer>
-     <p>© 2026 Lance Gomez · Calgary, AB</p>
-     <p>Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park</p>
-</footer>
+          <footer>
+               <p>© 2026 Lance Gomez · Calgary, AB</p>
+               <p>Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park</p>
+          </footer>
 
 
-<!-- TODO (Step 6): close the photo wrapper -->
+          <!-- TODO (Step 6): close the photo wrapper -->
 
-</main>
+     </main>
 </body>
+
 </html>

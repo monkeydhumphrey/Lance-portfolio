@@ -5,39 +5,67 @@
 */
 
 
-/* TODO (Step 2): CSS VARIABLES in :root
-   Colours:
-     page background   #F1F4F7
-     main text         #1D2A2B
-     muted text        #4E5D5E
-     card body text    #3C4A4B
-     teal              #2F6B6E
-     dark teal         #1F4A4C
-     light teal tint   #DCEAE8
-     amber dot         #D69E2E
-     amber text        #8A5A12
-     light amber tint  #FBEFD9
-     paper             #FBFCFD
-     divider           #E8ECEF
-   Fonts:
-     headings  'Fraunces', Georgia, serif
-     body      'Inter', system-ui, sans-serif
-   Shadows:
-     project card   6px 6px 0 rgba(29, 42, 43, 0.85)
-     about card     8px 8px 0 rgba(29, 42, 43, 0.85)
+/*
+*
+* ==== Variables: fonts, colours, shadows used across the site ====. 
+*/
+:root {
+
+       --heading-font: 'Fraunces', Georgia, serif;
+       --body-font: 'Inter', system-ui, sans-serif;
+       --shadow-project-card: 6px 6px 0 rgba(29, 42, 43, 0.85);
+       --shadow-about-card: 8px 8px 0 rgba(29, 42, 43, 0.85);
+       --page-background: #F1F4F7;
+       --main-text: #1D2A2B;
+       --muted-text: #4E5D5E;
+       --card-body-text: #3C4A4B;
+       --teal: #2F6B6E;
+       --dark-teal: #1F4A4C;
+       --light-teal-tint: #DCEAE8;
+       --amber-dot: #D69E2E;
+       --amber-text: #8A5A12;
+       --light-amber-tint: #FBEFD9;
+       --paper: #FBFCFD;
+       --divider: #E8ECEF;
+ }
+
+
+/*
+*
+* ==== Base styles: box-sizing, body, headings ====
+* ==== Basically the defalts for the whole page ====
+*/
+*, *::before, *::after {
+
+   box-sizing: border-box;
+}
+
+body {
+
+   margin: 0;
+   background-color: var(--page-background);
+   color: var(--main-text);
+   font-family: var(--body-font);
+}
+
+h1,h2,h3 {
+
+   font-family: var(--heading-font);
+}
+
+/*
+* ==== Container: keeps content centered, no larger than 1160px
+* ==== Used inside the ehader, hero and project sections ====
 */
 
+.container {
 
-/* TODO (Step 2): BASE
-   - box-sizing: border-box on everything
-   - body: margin 0, background, text colour, body font
-   - headings use the heading font
-*/
-
-
-/* TODO (Step 2): CONTAINER helper class
-   - max-width 1160px, centred, 24px padding left and right
-*/
+   max-width: 1160px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 24px;
+   padding-right: 24px;
+}
 
 
 /* TODO (Step 3): HEADER
