@@ -4,13 +4,25 @@
   Tip: build one section at a time, check it in the browser, then commit.
 -->
 
-<!-- TODO (Step 1): HTML boilerplate
-     - doctype
-     - <html> with lang="en"
-     - <head>: meta charset, meta viewport, <title>Lance Gomez</title>
-     - Google Fonts link for Fraunces (700) and Inter (400, 500, 600)
-     - link to style.css
--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Lance Gomez</title>
+
+     <!-- Font: Fraunces (700 weight) + Inter (400, 500, 600) -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
 
 
 <!-- TODO (Step 3): HEADER
@@ -18,8 +30,12 @@
      - nav links on the right: Projects (#projects), About (#about), Resume (resume.pdf), Contact (#contact)
 -->
 
+<header>
 
-<!-- TODO (Step 1): open <main> -->
+</header>
+
+
+<main>
 
 
 <!-- TODO (Step 4): HERO (give it id="top")
@@ -28,7 +44,16 @@
      - sub-line: BCIS student at Mount Royal University in Calgary, looking for a Spring or Summer 2027 internship.
      - buttons: "See my work" (to #projects) and "Resume" (to resume.pdf)
 -->
+<section id="top">
 
+     <h1>Lance Gomez</h1>
+     <p class="tagline">Part code, part wandering, mostly curiosity.</p>
+     <p class="sub-line">BCIS student at Mount Royal University in Calgary, looking for a Spring or Summer 2027 internship.</p>
+     <div class="hero-buttons">
+          <a href="#projects" class="button">See my work</a>
+          <a href="resume.pdf" class="button">Resume</a>
+     </div>
+</section>
 
 <!-- TODO (Step 5): BUILT & BUILDING (id="projects")
      - heading: Built & building, with the & wrapped in a <span> for the teal style
@@ -38,8 +63,22 @@
      - Card 2: Baskemtball · Planned · Coming soon
      - Card 3: [Web 2 project] · In progress · View code, Live demo
 -->
+<section id="projects">
+     <h2>Built <span>&</span> building</h2>
 
+     <div class="project-cards">
 
+          <article class="project-card">
+
+               <div class="status in-progress"><span class="dot"></span> In progress</div>
+               <h3>This website</h3>
+               <p>A portfolio website to showcase my work and skills.</p>
+               <p class="tech-stack">HTML · CSS · JavaScript</p>
+               <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">View code</a>
+          </article>
+
+</div>
+</section>
 <!-- TODO (Step 6): PHOTO WRAPPER (the fade + the Ten Peaks background)
      - one wrapper element around About, Contact and the footer
      - first thing inside it: an empty element for the gradient fade (aria-hidden="true")
@@ -55,19 +94,51 @@
 -->
 
 
+<!--- REPLACE THE TEXT BECAUSE NOT RIGHT -->
+     <section id="about">
+
+          <div class="about-heading">
+               <img src="images/lance-gomez.jpg" alt="Lance Gomez" class="round-photo">
+               <h2>About me</h2>
+               <p class="location">3rd year BCIS · Calgary, AB</p>
+          </div>
+          <p class="about-paragraph">I am a third-year BCIS student at Mount Royal University in Calgary, Alberta. I have a passion for technology and enjoy exploring new programming languages and frameworks. My goal is to leverage my skills to create innovative solutions that make a positive impact.</p>
+          <p class="skills">I work with: SQL · PHP · JavaScript · HTML & CSS · SAP</p>
+          <p class="hobbies">Off the clock: Above the treeline, Music, Film, Video games, Fantasy basketball</p>
+          <a href="resume.pdf" class="button">Full skills & experience on my resume →</a>      
+     </section>
+     
 <!-- TODO (Step 8): LOOKING FOR MY NEXT CREW (id="contact"), inside the photo wrapper
      - heading with images/straw-hat.svg instead of a period (alt="" or a short aria-label)
      - my contact sentence
      - buttons: Email (mailto:), LinkedIn, GitHub
--->
+-->  
 
+
+<!--REPLACE THE TEXT BECAUSE NOT RIGHT -->
+     <section id="contact">
+          <h2>Looking for my next crew <img src="images/straw-hat.svg" alt="" class="straw-hat"></h2>
+          <p>If you're looking for a passionate and dedicated BCIS student to join your team, I'd love to hear from you! Please feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
+          <div class="contact-buttons">
+               <a href="mailto:>?" class="button">Email</a>
+               <a href="https://www.linkedin.com/in/lancegomez/" target="_blank" class="button">LinkedIn</a>
+               <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">GitHub</a>
+          </div>
+     </section>
 
 <!-- TODO (Step 8): FOOTER, inside the photo wrapper
      - © 2026 Lance Gomez · Calgary, AB
      - Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park
 -->
 
+<footer>
+     <p>© 2026 Lance Gomez · Calgary, AB</p>
+     <p>Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park</p>
+</footer>
+
 
 <!-- TODO (Step 6): close the photo wrapper -->
 
-<!-- TODO (Step 1): close </main>, </body>, </html> -->
+</main>
+</body>
+</html>
