@@ -40,6 +40,11 @@
    box-sizing: border-box;
 }
 
+/*
+* ==== WHAT: the whole page ====
+* ==== DOES: removes default white gap around the edges, sets the background colour,
+*       text colour and font family ====
+*/
 body {
 
    margin: 0;
@@ -48,14 +53,19 @@ body {
    font-family: var(--body-font);
 }
 
+/*
+*  ==== WHAT: inner wrapper inside header, hero and projects ====
+* ==== DOES: switches them to my heading font choice (Fraunces) ====
+*/
 h1,h2,h3 {
 
    font-family: var(--heading-font);
 }
 
 /*
-* ==== Container: keeps content centered, no larger than 1160px
-* ==== Used inside the ehader, hero and project sections ====
+*  ==== WHAT: inner wrapper inside header, hero and projects ====
+* ==== DOES: keeps content centered, no larger than 1160px 
+* with 24px of padding on each side so doesn't touch edges ====
 */
 
 .container {
@@ -68,10 +78,64 @@ h1,h2,h3 {
 }
 
 
-/* TODO (Step 3): HEADER
-   - flexbox, "LG" left, links right, space-between, wraps on small screens
-   - plain links, no filled button
+/*
+* ==== WHAT: the headers row. LG and the nav links ====
+* === DOES: Puts LG link in the upper left, and nav on the right
+* lines up vertically and adds spaces above and below. ====
 */
+
+.header-inner {
+ 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 24px;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+/*
+* ==== WHAT: the LG link in the upper left corner ====
+* ==== DOES: styles the LG link ====
+*/
+
+.logo {
+
+   font-family: var(--heading-font);
+   font-weight: 700;
+   font-size: 24px;
+   text-decoration: none;
+   color: var(--main-text);
+}
+
+/*
+* === WHAT: the list that holds my 4 menu links ====
+* ==== DOES: removes bullet points, default spacing and lines the links up in a row
+ with 28px between each of them ====
+*/
+
+nav ul {
+
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   gap: 28px;
+}
+
+/*
+* === WHAT: the links in the nav bar (Projects, About, Resume, Contact) ====
+* ==== DOES: styles the links ====
+*/
+
+nav a {
+   
+   font-size: 15px;
+   font-weight: 500;
+   color: var(--main-text);
+   text-decoration: none;
+}
+
 
 
 /* TODO (Step 4): HERO
