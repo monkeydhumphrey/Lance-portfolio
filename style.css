@@ -250,14 +250,200 @@ nav a {
    border: 1px solid var(--border-soft);
 }
 
-/* TODO (Step 5): BUILT & BUILDING
-   - the teal & span (Inter, 600)
-   - grid: repeat(auto-fit, minmax(260px, 1fr)), gap 20px
-   - paper cards: background, 1px dark border, 3px corners, hard shadow
-   - status dot: 8px circle + 3px ring (teal for In progress, amber for Planned)
-   - push the links row to the bottom of each card
+/*
+* ==== WHAT: the "Built & building" heading ====
+* ==== DOES: makes it 44px with space below so the cards don't touch it ====
 */
 
+.projects h2 {
+
+   font-size: 44px;
+   margin-bottom: 24px;
+}
+
+/*
+* ==== WHAT: the & in "Built & building" ====
+* ==== DOES: switches it to Inter, bold and teal so it stands out from the heading ====
+*/
+
+.amp {
+
+   font-family: var(--body-font);
+   font-weight: 600;
+   color: var(--teal);
+}
+
+/*
+* ==== WHAT: each project card ====
+* ==== DOES: the paper look: off-white background, thin border, small corners,
+*       hard shadow. also stacks everything inside top to bottom (flex column) ====
+*/
+
+.project-card {
+
+   background-color: var(--paper);
+   border: 1px solid var(--border-soft);
+   border-radius: 3px;
+   box-shadow: var(--shadow-project-card);
+   display: flex;
+   flex-direction: column;
+   padding: 24px;
+}
+
+/*
+* ==== WHAT: the box holding all 3 project cards ====
+* ==== DOES: makes a grid that fits as many 260px+ columns as the screen allows,
+*       so it goes 3 → 2 → 1 columns by itself, with 20px between cards ====
+*/
+
+.project-cards {
+
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 20px;
+}
+
+/*
+* ==== WHAT: the project names (This website, Baskemtball, etc.) ====
+* ==== DOES: shrinks the browser's default big gap above and below the name ====
+*/
+
+.project-card h3 {
+
+   margin-top: 16px;
+   margin-bottom: 8px;
+}
+
+/*
+* ==== WHAT: the paragraphs inside each card (description + tech stack) ====
+* ==== DOES: removes the default top gap and keeps the spacing tight and even ====
+*/
+
+.project-card p {
+
+   margin-top: 0px;
+   margin-bottom: 16px;
+}
+
+/*
+* ==== WHAT: the row of links at the bottom of each card ====
+* ==== DOES: pushes the links to the bottom of the card (margin-top: auto)
+*       so all 3 cards line up, and puts multiple links side by side ====
+*/
+
+.card-links {
+
+   margin-top: auto;
+   display: flex;
+   gap: 16px;
+}
+
+/*
+* ==== WHAT: the status row at the top of each card (dot + text) ====
+* ==== DOES: puts the dot and text side by side, lined up in the middle,
+*       with 8px between them, small and bold ====
+*/
+
+.status { 
+
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+/*
+* ==== WHAT: the little status dot on every card (shared base) ====
+* ==== DOES: makes an 8px circle. the colour and ring come from
+*       .in-progress .dot and .planned .dot ====
+*/
+
+.dot {
+
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+}
+
+/*
+* ==== WHAT: the whole "In progress" status row ====
+* ==== DOES: turns the words "In progress" dark teal to match its dot ====
+*/
+
+.in-progress {
+
+   color: var(--dark-teal);
+}
+
+/*
+* ==== WHAT: the dot on an "In progress" card ====
+* ==== DOES: dark teal dot with a light teal ring around it ====
+*/
+
+.in-progress .dot {
+   
+   background-color: var(--dark-teal);
+   box-shadow: 0 0 0 3px var(--light-teal-tint);
+}
+
+/*
+* ==== WHAT: the whole "Planned" status row ====
+* ==== DOES: turns the word "Planned" amber to match its dot ====
+*/
+
+.planned {
+
+   color: var(--amber-text);
+}
+
+/*
+* ==== WHAT: the dot on a "Planned" card ====
+* ==== DOES: amber dot with a light amber ring around it ====
+*/
+
+.planned .dot {
+   
+   background-color: var(--amber-dot);
+   box-shadow: 0 0 0 3px var(--light-amber-tint);
+}
+
+/*
+* ==== WHAT: the tech stack line on each card (HTML · CSS · JavaScript) ====
+* ==== DOES: smaller and muted grey so it reads as extra info, not the main text ====
+*/
+
+.tech-stack {
+
+   font-size: 14px;
+   color: var(--muted-text);
+   margin-top: 8px;
+   margin-bottom: 8px;
+}
+
+/*
+* ==== WHAT: the links on the cards (View code, Live demo) ====
+* ==== DOES: small, bold, dark teal and no underline so they look like
+*       clean text links instead of buttons ====
+*/
+
+.card-link {
+   
+   font-size: 14px;
+   font-weight: 600;
+   color: var(--dark-teal);
+   text-decoration: none;
+}
+
+/*
+* ==== WHAT: the "Coming soon" text on the Baskemtball card ====
+* ==== DOES: makes it muted grey so it doesn't look clickable like the real links ====
+*/
+
+.disabled {
+
+   color: var(--muted-text);
+}
 
 /* TODO (Step 6): PHOTO WRAPPER + FADE
    - background-image: url("images/rockies-ten-peaks.jpg")

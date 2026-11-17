@@ -55,28 +55,53 @@
                </div>
           </section>
 
-          <!-- TODO (Step 5): BUILT & BUILDING (id="projects")
-     - heading: Built & building, with the & wrapped in a <span> for the teal style
-     - 3 project cards (<article>), each with:
-         status (dot + text), name, one-line description, tech stack, links
-     - Card 1: This website · In progress · View code
-     - Card 2: Baskemtball · Planned · Coming soon
-     - Card 3: [Web 2 project] · In progress · View code, Live demo
--->
-          <section id="projects">
+          <section id="projects" class="projects">
                <div class="container">
-                    <h2>Built <span>&</span> building</h2>
+                    <h2>Built <span class="amp">&</span> building</h2>
 
                     <div class="project-cards">
 
                          <article class="project-card">
 
-                              <div class="status in-progress"><span class="dot"></span> In progress</div>
+                              <div class="status in-progress">
+                                   <span class="dot"></span>
+                                   <span>In progress</span>
+                              </div>
                               <h3>This website</h3>
                               <p>A portfolio website to showcase my work and skills.</p>
                               <p class="tech-stack">HTML · CSS · JavaScript</p>
-                              <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">View
-                                   code</a>
+                              <div class="card-links">
+                                   <a href="https://github.com/monkeydhumphrey/Lance-portfolio" class="card-link"
+                                        target="_blank" rel="noopener">View code ↗</a>
+                              </div>
+                         </article>
+
+                         <article class="project-card">
+
+                              <div class="status planned">
+                                   <span class="dot"></span>
+                                   <span>Planned</span>
+                              </div>
+                              <h3>Baskemtball</h3>
+                              <p>A fantasy basketball web app to track player stats and manage teams.</p>
+                              <p class="tech-stack">PHP · MySQL · JavaScript</p>
+                              <div class="card-links">
+                                   <span class="card-link disabled">Coming soon</span>
+                              </div>
+                         </article>
+
+                         <article class="project-card">
+                              <div class="status in-progress">
+                                   <span class="dot"></span>
+                                   <span>In progress</span>
+                              </div>
+                              <h3>[Web 2 project]</h3>
+                              <p>[One line on what it does.]</p>
+                              <p class="tech-stack">PHP · JavaScript · [Database]</p>
+                              <div class="card-links">
+                                   <a href="#" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+                                   <a href="#" class="card-link" target="_blank" rel="noopener">Live demo ↗</a>
+                              </div>
                          </article>
 
                     </div>
