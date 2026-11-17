@@ -7,7 +7,7 @@
 
 /*
 *
-* ==== Variables: fonts, colours, shadows used across the site ====. 
+* ==== Variables: fonts, colours, shadows used across the site ====
 */
 :root {
 
@@ -27,13 +27,14 @@
        --light-amber-tint: #FBEFD9;
        --paper: #FBFCFD;
        --divider: #E8ECEF;
+       --border-soft: rgba(29, 42, 43, 0.2);
  }
 
 
 /*
 *
 * ==== Base styles: box-sizing, body, headings ====
-* ==== Basically the defalts for the whole page ====
+* ==== Basically the defaults for the whole page ====
 */
 *, *::before, *::after {
 
@@ -54,7 +55,7 @@ body {
 }
 
 /*
-*  ==== WHAT: inner wrapper inside header, hero and projects ====
+*  ==== WHAT: ALL HEADINGS (my name, section title, project names) ====
 * ==== DOES: switches them to my heading font choice (Fraunces) ====
 */
 h1,h2,h3 {
@@ -97,7 +98,8 @@ h1,h2,h3 {
 
 /*
 * ==== WHAT: the LG link in the upper left corner ====
-* ==== DOES: styles the LG link ====
+* ==== DOES: makes it my heading font (Fraunces), bold and 24px,
+*       dark text with no underline so it looks like a logo, not a link ====
 */
 
 .logo {
@@ -125,8 +127,9 @@ nav ul {
 }
 
 /*
-* === WHAT: the links in the nav bar (Projects, About, Resume, Contact) ====
-* ==== DOES: styles the links ====
+* ==== WHAT: the links in the nav bar (Projects, About, Resume, Contact) ====
+* ==== DOES: makes them 15px, medium weight, dark text and no underline
+*       so they look clean instead of default blue links ====
 */
 
 nav a {
@@ -137,16 +140,115 @@ nav a {
    text-decoration: none;
 }
 
-
-
-/* TODO (Step 4): HERO
-   - name: clamp(80px, 12.5vw, 176px), line-height 0.92, letter-spacing -0.03em
-   - tagline: 26px, weight 500
-   - sub-line: 18px, muted
-   - buttons: filled teal + white outline, 6px corners
-   - big vertical padding (about 130px)
+/*
+* ==== WHAT: the hero section (the first thing you see) ====
+* ==== DOES: adds big space above and below so my name has room to breathe ====
 */
 
+.hero {
+
+   padding-top: 130px;
+   padding-bottom: 130px;
+}
+
+/*
+* ==== WHAT: my name, Lance Gomez ====
+* ==== DOES: makes it huge but scales with the screen (never smaller than 80px,
+*       never bigger than 176px), tightens the lines and letters,
+*       and removes the default heading gap ====
+*/
+
+.hero h1 {
+
+   font-size: clamp(80px, 12.5vw, 176px);
+   line-height: 0.92;
+   letter-spacing: -0.03em;
+   margin: 0px;
+}
+
+/*
+* ==== WHAT: the tagline under my name ====
+* ==== DOES: makes it 26px and a bit bolder so it reads as the second
+*       most important line ====
+*/
+
+.tagline {
+
+   font-size: 26px;
+   font-weight: 500;
+   margin-top: 8px;
+   margin-bottom: 8px;
+}
+
+/*
+* ==== WHAT: the line about BCIS, MRU and my internship ====
+* ==== DOES: smaller and softer grey text so it doesn't compete with the tagline,
+*       and stops it from stretching too wide ====
+*/
+
+.sub-line {
+
+   font-size: 18px;
+   color: var(--muted-text);
+   max-width: 600px;
+   margin-top: 8px;
+   margin-bottom: 8px;
+}
+
+/*
+* ==== WHAT: the row holding my two hero buttons ====
+* ==== DOES: puts them side by side with 16px between them
+*       and space above so they don't touch the text ====
+*/
+
+.hero-buttons {
+
+   display: flex;
+   gap: 16px;
+   margin-top: 24px;
+} 
+
+/*
+* ==== WHAT: every button on the site (shared base) ====
+* ==== DOES: turns a link into a button shape: padding, rounded corners,
+*       bold text, no underline. the colours come from the classes below ====
+*/
+
+.button{
+   
+   display: inline-block;
+   padding: 12px 24px;
+   border-radius: 6px;
+   font-size: 16px;
+   font-weight: 600;
+   text-decoration: none;
+   text-align: center;
+}
+
+/*
+* ==== WHAT: the main button ("See my work") ====
+* ==== DOES: teal background with white text so it stands out as the main action ====
+*/
+
+.button-filled {
+
+   background-color: var(--teal);
+   color: white;
+   border: 1px solid transparent;
+}  
+
+/*
+* ==== WHAT: the second button ("Resume") ====
+* ==== DOES: white button with dark text and a soft thin border
+*       so it's there but doesn't compete with "See my work" ====
+*/
+
+.button-outline {
+
+   background-color: var(--paper);
+   color: var(--main-text);
+   border: 1px solid var(--border-soft);
+}
 
 /* TODO (Step 5): BUILT & BUILDING
    - the teal & span (Inter, 600)
@@ -190,6 +292,7 @@ nav a {
 
 /* TODO (Step 9): MOBILE
    - media query for narrow screens: stack things, shrink padding, wrap the nav
+   - shrink hero padding for mobile, 130px too much
 */
 
 
