@@ -166,7 +166,7 @@ nav a {
 /*
 * ==== WHAT: my name, Lance Gomez ====
 * ==== DOES: makes it huge but scales with the screen (never smaller than 80px,
-*       never bigger than 176px), tightens the lines and letters,
+*       never bigger than 136px), tightens the lines and letters,
 *       and removes the default heading gap ====
 */
 
@@ -598,11 +598,12 @@ nav a {
 
 /*
 * ==== WHAT: the teal dots between my skills ====
-* ==== DOES: adds a teal · before every skill except the first one
-*       (li + li means "a li that comes right after another li") ====
+* ==== DOES: adds a teal · after every skill except the last one, so when the list
+*       wraps the dot stays at the end of the line instead of starting the next one
+*       (:not(:last-child) means "every li except the last one") ====
 */
 
-.skills li + li::before {
+.skills li:not(:last-child)::after {
 
    content: "·";
    color: var(--teal);
@@ -737,6 +738,17 @@ nav a {
 }
 
 /*
+* ==== WHAT: the span holding "crew" + the straw hat ====
+* ==== DOES: stops the line from breaking inside it, so the hat
+*       never ends up alone on its own line ====
+*/
+
+.no-break {
+
+   white-space: nowrap;
+}
+
+/*
 * ==== WHAT: the paragraph under the heading ====
 * ==== DOES: softer light grey so it doesn't compete with the heading,
 *       with comfy line spacing ====
@@ -829,10 +841,139 @@ nav a {
 
    margin: 0;
 }
-/* TODO (Step 9): MOBILE
-   - media query for narrow screens: stack things, shrink padding, wrap the nav
-   - shrink hero padding for mobile, 130px too much
+
+/*
+* ==== WHAT: mobile styles (screens 600px wide or smaller) ====
+* ==== DOES: everything inside only kicks in on phones. it overrides the desktop
+*       rules above because it comes later in the file. only the things that
+*       change are written here ====
 */
+
+@media (max-width: 600px) {
+
+   /*
+   * ==== WHAT: the nav links on mobile ====
+   * ==== DOES: lets them wrap to a second row if they don't fit,
+   *       with smaller gaps (8px between rows, 20px between links) ====
+   */
+
+   nav ul {
+
+      flex-wrap: wrap;
+      gap: 8px 20px;
+   }
+
+   /*
+   * ==== WHAT: the hero on mobile ====
+   * ==== DOES: cuts the big 130px space down so my name isn't halfway down the screen ====
+   */
+
+   .hero {
+
+      padding-top: 72px;
+      padding-bottom: 72px;
+   }
+
+   /*
+   * ==== WHAT: the tagline and sub-line on mobile ====
+   * ==== DOES: shrinks them so the tagline fits in 2 lines instead of 3 ====
+   */
+
+   .tagline {
+
+      font-size: 21px;
+   }
+
+   .sub-line {
+
+      font-size: 16px;
+   }
+
+   /*
+   * ==== WHAT: the hero buttons on mobile ====
+   * ==== DOES: lets the second button drop to a new line on really small screens ====
+   */
+
+   .hero-buttons {
+
+      flex-wrap: wrap;
+   }
+
+   /*
+   * ==== WHAT: the projects section on mobile ====
+   * ==== DOES: less space above and below, and a smaller "Built & building" heading ====
+   */
+
+   .projects {
+
+      padding-top: 72px;
+      padding-bottom: 72px;
+   }
+
+   .projects h2 {
+
+      font-size: 34px;
+   }
+
+   /*
+   * ==== WHAT: the about section on mobile ====
+   * ==== DOES: smaller gap below the card (still shows the peaks, less scrolling),
+   *       less padding inside the card so the text has room, smaller heading ====
+   */
+
+   .about {
+
+      padding-bottom: 220px;
+   }
+
+   .about-card {
+
+      padding: 24px;
+   }
+
+   .about-heading h2 {
+
+      font-size: 28px;
+   }
+
+   /*
+   * ==== WHAT: the contact card on mobile ====
+   * ==== DOES: less padding inside and a smaller heading so it fits in 2 lines ====
+   */
+
+   .contact-card {
+
+      padding: 28px;
+   }
+
+   .contact-card h2 {
+
+      font-size: 32px;
+   }
+
+   /*
+   * ==== WHAT: the row holding my contact buttons on mobile ====
+   * ==== DOES: makes the row as wide as the card so the buttons
+   *       inside can stretch all the way across ====
+   */
+
+   .contact-buttons {
+
+      width: 100%;
+   }
+
+   /*
+   * ==== WHAT: the contact buttons on mobile ====
+   * ==== DOES: makes each button stretch the full width of the card
+   *       so they stack neatly and are easy to tap
+   *       (flex: 1 1 100% means grow, shrink, and start at full width) ====
+   */
+
+   .contact-buttons .button {
+
+      flex: 1 1 100%;
+   }
+}
 
 
 /* TODO (Step 10): POLISH
