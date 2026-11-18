@@ -445,12 +445,6 @@ nav a {
    color: var(--muted-text);
 }
 
-/* TODO (Step 6): PHOTO WRAPPER + FADE
-   - background-image: url("images/rockies-ten-peaks.jpg")
-   - background-size: cover; background-position: center 70%
-   - fade element: height 160px, linear-gradient(to bottom, #F1F4F7, transparent)
-*/
-
 .photo-wrap {
 
    background-image: url("images/rockies-ten-peaks.jpg");
@@ -469,13 +463,197 @@ nav a {
    padding-top: 110px;
    padding-bottom: 110px;
 }
-/* TODO (Step 7): ABOUT CARD
-   - paper card with the bigger hard shadow
-   - photo circle: 84px, border-radius 50%, 1px dark border, object-fit cover
-   - small uppercase labels: 13px, 600, letter-spacing 0.06em, muted
-   - teal dots between skills, teal icons on hobbies
-   - about 380px of space below the card so the peaks show
+
+/*
+* ==== WHAT: the about section (the band that holds the about card) ====
+* ==== DOES: adds a big empty space below the card so the peaks
+*       in the photo can show through ====
 */
+
+.about {
+
+   padding-bottom: 380px;
+}
+
+/*
+* ==== WHAT: the about card itself ====
+* ==== DOES: the paper look like my project cards but with the bigger shadow.
+*       max-width stops the text lines from getting too long to read ====
+*/
+
+.about-card {
+
+   background-color: var(--paper);
+   color: var(--card-body-text);
+   border: 1px solid var(--main-text);
+   border-radius: 3px;
+   box-shadow: var(--shadow-about-card);
+   padding: 36px;
+   /* max-width: 720px; */
+}
+
+/*
+* ==== WHAT: the top row of the card (my photo + "About me" + location) ====
+* ==== DOES: puts my photo on the left and the text beside it,
+*       lined up in the middle with space between ====
+*/
+
+.about-heading {
+
+   display: flex;
+   align-items: center;
+   gap: 18px;
+   margin-bottom: 20px;
+}
+
+/*
+* ==== WHAT: the "About me" title and location line in the heading row ====
+* ==== DOES: removes the default gaps so they sit tight together ====
+*/
+
+.about-heading h2 {
+
+   margin: 0;
+   font-size: 34px;
+   color: var(--main-text);
+}
+
+.about-heading p {
+
+   margin: 0;
+   color: var(--muted-text);
+}
+
+/*
+* ==== WHAT: my about paragraph ====
+* ==== DOES: stops the lines at 680px so they're easy to read,
+*       and adds more space between lines ====
+*/
+
+.about-paragraph {
+
+   max-width: 680px;
+   line-height: 1.6;
+}
+
+/*
+* ==== WHAT: my round photo in the top left of the card ====
+* ==== DOES: makes it an 84px circle with a thin dark border.
+*       object-fit crops the photo to fill the circle instead of squishing it ====
+*/
+
+.round-photo {
+
+   width: 84px;
+   height: 84px;
+   border-radius: 50%;
+   border: 1px solid var(--main-text);
+   object-fit: cover;
+}
+
+/*
+* ==== WHAT: the small titles "I work with" and "Off the clock" ====
+* ==== DOES: small, bold, spaced out, uppercase and grey so they read as labels.
+*       font-family switches it back to Inter since h3s are Fraunces by default ====
+*/
+
+.label {
+
+   font-family: var(--body-font);
+   font-size: 13px;
+   font-weight: 600;
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+   color: var(--muted-text);
+   margin-top: 20px;
+   margin-bottom: 8px;
+}
+
+/*
+* ==== WHAT: my list of skills (SQL, PHP, JavaScript...) ====
+* ==== DOES: removes the bullets and default spacing, puts them in a row
+*       and lets them wrap to a new line on small screens ====
+*/
+
+.skills {
+
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+/*
+* ==== WHAT: the teal dots between my skills ====
+* ==== DOES: adds a teal · before every skill except the first one
+*       (li + li means "a li that comes right after another li") ====
+*/
+
+.skills li + li::before {
+
+   content: "·";
+   color: var(--teal);
+   margin-left: 8px;
+   margin-right: 8px;
+}
+
+/*
+* ==== WHAT: my list of hobbies (with the icons) ====
+* ==== DOES: same as skills: no bullets, in a row, wraps on small screens,
+*       with bigger gaps between each hobby ====
+*/
+
+.hobbies {
+
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px 22px;
+}
+
+/*
+* ==== WHAT: each hobby (icon + text) ====
+* ==== DOES: puts the icon and the words side by side, lined up in the middle ====
+*/
+
+.hobbies li {
+
+   display: flex;
+   align-items: center;
+   gap: 7px;
+}
+
+/*
+* ==== WHAT: the hobby icons ====
+* ==== DOES: shrinks them to 18px and makes them teal
+*       (works because the icons use currentColor) ====
+*/
+
+.hobbies svg {
+
+   width: 18px;
+   height: 18px;
+   color: var(--teal);
+   flex-shrink: 0;
+}
+
+/*
+* ==== WHAT: the "Full skills & experience on my resume" link ====
+* ==== DOES: dark teal and bold with no underline, plus space above
+*       so it doesn't touch the hobbies ====
+*/
+
+.about-link {
+
+   display: inline-block;
+   margin-top: 24px;
+   color: var(--dark-teal);
+   font-weight: 600;
+   text-decoration: none;
+}
 
 
 /* TODO (Step 8): CONTACT BLOCK
