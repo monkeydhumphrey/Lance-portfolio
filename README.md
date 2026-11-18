@@ -4,7 +4,7 @@ My personal site, built from a blank file with plain HTML and CSS. No templates,
 
 I'm a 3rd-year BCIS student at Mount Royal University in Calgary, looking for a Spring or Summer 2027 internship.
 
-**Live site:** [link coming soon]
+**Live site:** https://lancegomez.com
 
 ## Why I built it this way
 
