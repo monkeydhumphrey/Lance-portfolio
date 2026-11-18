@@ -1,6 +1,5 @@
 /*
   style.css: all the styling for my portfolio.
-  Every block below is a TODO for me to write. The values come from PLAN.md.
   Order: variables → base → layout helpers → sections from top to bottom → mobile → polish.
 */
 
@@ -28,6 +27,19 @@
        --paper: #FBFCFD;
        --divider: #E8ECEF;
        --border-soft: rgba(29, 42, 43, 0.2);
+
+
+       /**
+       * ==== The CONTACT BLOCK + FOOTER ====
+       */
+       --contact-bg: rgba(16, 26, 28, 0.74);
+       --contact-border: rgba(241, 244, 247, 0.28);
+       --shadow-contact-card: 8px 8px 0 rgba(8, 14, 16, 0.55);
+       --light-text: #F1F4F7;
+       --light-muted-text: #D3DBDC;
+       --light-outline: rgba(241, 244, 247, 0.6);
+       --email-button: #8FC7C9;
+       --email-button-text: #14201F;
  }
 
 
@@ -655,22 +667,168 @@ nav a {
    text-decoration: none;
 }
 
-
-/* TODO (Step 8): CONTACT BLOCK
-   - background rgba(16, 26, 28, 0.74), no blur
-   - border 1px solid rgba(241, 244, 247, 0.28)
-   - hard shadow 8px 8px 0 rgba(8, 14, 16, 0.55)
-   - heading #F1F4F7, paragraph #D3DBDC
-   - straw hat about 46 × 28px, sitting on the text baseline
-   - email button: #8FC7C9 with #14201F text; LinkedIn/GitHub as outline buttons
+/*
+* ==== WHAT: the contact section (the band that holds the contact card) ====
+* ==== DOES: adds a small space below so the footer isn't glued to the card ====
 */
 
+.contact {
 
-/* TODO (Step 8): FOOTER STRIP
-   - same dark see-through style, small text, space-between
+   padding-bottom: 20px;
+}
+
+/*
+* ==== WHAT: the "Looking for my next crew" card ====
+* ==== DOES: dark see-through box on the photo (no blur) with a thin light border
+*       and a dark hard shadow. flex puts the text on the left and buttons on the right,
+*       and wraps them on small screens ====
 */
 
+.contact-card {
 
+   background-color: var(--contact-bg);
+   border: 1px solid var(--contact-border);
+   border-radius: 3px;
+   box-shadow: var(--shadow-contact-card);
+   padding: 48px;
+   color: var(--light-text);
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   flex-wrap: wrap;
+   gap: 32px;
+}
+
+/*
+* ==== WHAT: the heading + paragraph side of the contact card ====
+* ==== DOES: stops the text from stretching too wide ====
+*/
+
+.contact-text {
+
+   max-width: 560px;
+}
+
+/*
+* ==== WHAT: the "Looking for my next crew" heading ====
+* ==== DOES: big light text with no default gap ====
+*/
+
+.contact-card h2 {
+
+   margin: 0;
+   font-size: 44px;
+   line-height: 1.1;
+   color: var(--light-text);
+}
+
+/*
+* ==== WHAT: the straw hat at the end of the heading ====
+* ==== DOES: sizes it, adds a small gap after "crew",
+*       and nudges it down so it sits on the text line like a period would ====
+*/
+
+.straw-hat {
+
+   width: 46px;
+   height: 28px;
+   margin-left: 8px;
+   vertical-align: -2px;
+}
+
+/*
+* ==== WHAT: the paragraph under the heading ====
+* ==== DOES: softer light grey so it doesn't compete with the heading,
+*       with comfy line spacing ====
+*/
+
+.contact-card p {
+
+   margin-top: 12px;
+   margin-bottom: 0;
+   font-size: 17px;
+   line-height: 1.6;
+   color: var(--light-muted-text);
+}
+
+/*
+* ==== WHAT: the row holding my contact buttons ====
+* ==== DOES: puts them side by side with 12px between them
+*       and lets them wrap on small screens ====
+*/
+
+.contact-buttons {
+
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+
+/*
+* ==== WHAT: the "Email me" button ====
+* ==== DOES: light teal with dark text so it stands out as the main action
+*       on the dark card. transparent border keeps it the same height as the others ====
+*/
+
+.button-email {
+
+   background-color: var(--email-button);
+   color: var(--email-button-text);
+   border: 1px solid transparent;
+}
+
+/*
+* ==== WHAT: the LinkedIn and GitHub buttons ====
+* ==== DOES: see-through with light text and a thin light border
+*       so they're there but quieter than "Email me" ====
+*/
+
+.button-light-outline {
+
+   background-color: transparent;
+   color: var(--light-text);
+   border: 1px solid var(--light-outline);
+}
+
+/*
+* ==== WHAT: the footer (the band at the very bottom) ====
+* ==== DOES: leaves a bit of the photo showing below the footer strip ====
+*/
+
+.site-footer {
+
+   padding-bottom: 40px;
+}
+
+/*
+* ==== WHAT: the footer strip (copyright + photo credit) ====
+* ==== DOES: same dark see-through style as the contact card,
+*       copyright on the left, photo credit on the right, small light text ====
+*/
+
+.footer-strip {
+
+   background-color: var(--contact-bg);
+   border: 1px solid var(--contact-border);
+   border-radius: 3px;
+   padding: 14px 20px;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 12px;
+   font-size: 14px;
+   color: var(--light-muted-text);
+}
+
+/*
+* ==== WHAT: the two lines of text in the footer strip ====
+* ==== DOES: removes the default paragraph gaps so the strip stays slim ====
+*/
+
+.footer-strip p {
+
+   margin: 0;
+}
 /* TODO (Step 9): MOBILE
    - media query for narrow screens: stack things, shrink padding, wrap the nav
    - shrink hero padding for mobile, 130px too much
