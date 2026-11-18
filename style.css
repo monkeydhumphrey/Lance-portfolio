@@ -172,7 +172,7 @@ nav a {
 
 .hero h1 {
 
-   font-size: clamp(80px, 12.5vw, 176px);
+   font-size: clamp(80px, 10vw, 136px);
    line-height: 0.92;
    letter-spacing: -0.03em;
    margin: 0px;
@@ -706,7 +706,7 @@ nav a {
 
 .contact-text {
 
-   max-width: 560px;
+   max-width: 640px;
 }
 
 /*
