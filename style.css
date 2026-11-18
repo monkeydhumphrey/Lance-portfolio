@@ -223,7 +223,8 @@ nav a {
 /*
 * ==== WHAT: every button on the site (shared base) ====
 * ==== DOES: turns a link into a button shape: padding, rounded corners,
-*       bold text, no underline. the colours come from the classes below ====
+*       bold text, no underline. the colours come from the classes below
+        transition make its colours fade instead of instant ====
 */
 
 .button{
@@ -235,6 +236,7 @@ nav a {
    font-weight: 600;
    text-decoration: none;
    text-align: center;
+   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 /*
@@ -975,9 +977,123 @@ nav a {
    }
 }
 
-
-/* TODO (Step 10): POLISH
-   - hover and :focus-visible styles for links and buttons
-   - optional: scroll reveal on the About card (animation-timeline: view())
-   - turn animations off inside @media (prefers-reduced-motion: reduce)
+/*
+* ==== WHAT: text links when hovered or tabbed to (nav, LG, card links, about link) ====
+* ==== DOES: brings the underline back so it's clear they're clickable.
+*       offset pushes the line down so it doesn't hug the letters ====
 */
+
+nav a:hover,
+nav a:focus-visible,
+.logo:hover,
+.logo:focus-visible,
+.card-link:hover,
+.card-link:focus-visible,
+.about-link:hover,
+.about-link:focus-visible {
+
+   text-decoration: underline;
+   text-underline-offset: 4px;
+}
+
+/*
+* ==== WHAT: "See my work" when hovered or tabbed to ====
+* ==== DOES: darkens the teal so the button reacts ====
+*/
+
+.button-filled:hover,
+.button-filled:focus-visible {
+
+   background-color: var(--dark-teal);
+}
+
+/*
+* ==== WHAT: "Resume" when hovered or tabbed to ====
+* ==== DOES: darkens the soft border to full dark ====
+*/
+
+.button-outline:hover,
+.button-outline:focus-visible {
+
+   border-color: var(--main-text);
+}
+
+/*
+* ==== WHAT: the "Email me" button when hovered or tabbed to ====
+* ==== DOES: makes the light teal a bit lighter so it reacts
+*       without losing its look on the dark card ====
+*/
+
+.button-email:hover,
+.button-email:focus-visible {
+
+   background-color: #A9D6D8;
+}
+
+/*
+* ==== WHAT: the LinkedIn and GitHub buttons when hovered or tabbed to ====
+* ==== DOES: makes the border fully solid and adds a faint white background
+*       so the button lights up a little but stays see-through ====
+*/
+
+.button-light-outline:hover,
+.button-light-outline:focus-visible {
+
+   border-color: var(--light-text);
+   background-color: rgba(241, 244, 247, 0.1);
+}
+
+a:focus-visible {
+   outline: 2px solid var(--teal);
+   outline-offset: 3px;
+}
+
+.contact-card a:focus-visible {
+   outline: 2px solid var(--light-teal-tint);
+   outline-offset: 3px;
+}
+
+/*
+* ==== WHAT: scroll reveal on the about card ====
+* ==== DOES: the card fades in and rises up as I scroll to it.
+*       only runs if the person hasn't turned on "reduce motion"
+*       and only in browsers that support scroll-driven animations ====
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+
+   @supports (animation-timeline: view()) {
+
+      /*
+      * ==== WHAT: the rise-in animation ====
+      * ==== DOES: starts invisible and 40px lower, ends fully visible in place ====
+      */
+
+      @keyframes rise-in {
+
+         from {
+            opacity: 0;
+            transform: translateY(40px);
+         }
+
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      /*
+      * ==== WHAT: the about card with the animation ====
+      * ==== DOES: plays rise-in based on scroll position instead of time.
+      *       it starts when the card enters the screen and finishes
+      *       when the card is 30% of the way in ====
+      */
+
+      .about-card {
+
+         animation: rise-in linear both;
+         animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+      }
+   }
+}
