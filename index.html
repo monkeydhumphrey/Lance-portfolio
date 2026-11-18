@@ -45,7 +45,8 @@
                <div class="container">
                     <h1>Lance Gomez</h1>
                     <p class="tagline">Part code, part wandering, mostly curiosity.</p>
-                    <p class="sub-line">BCIS student at Mount Royal University in Calgary, looking for a Spring or
+                    <p class="sub-line">3rd year BCIS student at Mount Royal University in Calgary, looking for a Spring
+                         or
                          Summer
                          2027 internship.</p>
                     <div class="hero-buttons">
@@ -64,7 +65,7 @@
                          <article class="project-card">
 
                               <div class="status in-progress">
-                                   <span class="dot"></span>
+                                   <span class="dot" aria-hidden="true"></span>
                                    <span>In progress</span>
                               </div>
                               <h3>This website</h3>
@@ -79,7 +80,7 @@
                          <article class="project-card">
 
                               <div class="status planned">
-                                   <span class="dot"></span>
+                                   <span class="dot" aria-hidden="true"></span>
                                    <span>Planned</span>
                               </div>
                               <h3>Baskemtball</h3>
@@ -92,7 +93,7 @@
 
                          <article class="project-card">
                               <div class="status in-progress">
-                                   <span class="dot"></span>
+                                   <span class="dot" aria-hidden="true"></span>
                                    <span>In progress</span>
                               </div>
                               <h3>[Web 2 project]</h3>
@@ -107,13 +108,12 @@
                     </div>
                </div>
           </section>
-          <!-- TODO (Step 6): PHOTO WRAPPER (the fade + the Ten Peaks background)
-     - one wrapper element around About, Contact and the footer
-     - first thing inside it: an empty element for the gradient fade (aria-hidden="true")
--->
+
+          <div class="photo-wrap">
+               <div class="fade" aria-hidden="true"></div>
 
 
-          <!-- TODO (Step 7): ABOUT ME (id="about"), inside the photo wrapper
+               <!-- TODO (Step 7): ABOUT ME (id="about"), inside the photo wrapper
      - heading row: round photo of me + "About me" + "3rd year BCIS · Calgary, AB"
      - my paragraph (write it in my own words)
      - "I work with": SQL · PHP · JavaScript · HTML & CSS · SAP
@@ -122,54 +122,56 @@
 -->
 
 
-          <!--- REPLACE THE TEXT BECAUSE NOT RIGHT -->
-          <section id="about">
+               <!--- REPLACE THE TEXT BECAUSE NOT RIGHT -->
+               <section id="about">
 
-               <div class="about-heading">
-                    <img src="images/lance-gomez.jpg" alt="Lance Gomez" class="round-photo">
-                    <h2>About me</h2>
-                    <p class="location">3rd year BCIS · Calgary, AB</p>
-               </div>
-               <p class="about-paragraph">I am a third-year BCIS student at Mount Royal University in Calgary, Alberta.
-                    I have a passion for technology and enjoy exploring new programming languages and frameworks. My
-                    goal is to leverage my skills to create innovative solutions that make a positive impact.</p>
-               <p class="skills">I work with: SQL · PHP · JavaScript · HTML & CSS · SAP</p>
-               <p class="hobbies">Off the clock: Above the treeline, Music, Film, Video games, Fantasy basketball</p>
-               <a href="resume.pdf" class="button">Full skills & experience on my resume →</a>
-          </section>
+                    <div class="about-heading">
+                         <img src="images/lance-gomez.jpg" alt="Lance Gomez" class="round-photo">
+                         <h2>About me</h2>
+                         <p class="location">3rd year BCIS · Calgary, AB</p>
+                    </div>
+                    <p class="about-paragraph">I am a third-year BCIS student at Mount Royal University in Calgary,
+                         Alberta.
+                         I have a passion for technology and enjoy exploring new programming languages and frameworks.
+                         My
+                         goal is to leverage my skills to create innovative solutions that make a positive impact.</p>
+                    <p class="skills">I work with: SQL · PHP · JavaScript · HTML & CSS · SAP</p>
+                    <p class="hobbies">Off the clock: Above the treeline, Music, Film, Video games, Fantasy basketball
+                    </p>
+                    <a href="resume.pdf" class="button">Full skills & experience on my resume →</a>
+               </section>
 
-          <!-- TODO (Step 8): LOOKING FOR MY NEXT CREW (id="contact"), inside the photo wrapper
+               <!-- TODO (Step 8): LOOKING FOR MY NEXT CREW (id="contact"), inside the photo wrapper
      - heading with images/straw-hat.svg instead of a period (alt="" or a short aria-label)
      - my contact sentence
      - buttons: Email (mailto:), LinkedIn, GitHub
 -->
 
 
-          <!--REPLACE THE TEXT BECAUSE NOT RIGHT -->
-          <section id="contact">
-               <h2>Looking for my next crew <img src="images/straw-hat.svg" alt="" class="straw-hat"></h2>
-               <p>If you're looking for a passionate and dedicated BCIS student to join your team, I'd love to hear from
-                    you! Please feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
-               <div class="contact-buttons">
-                    <a href="mailto:>?" class="button">Email</a>
-                    <a href="https://www.linkedin.com/in/lancegomez/" target="_blank" class="button">LinkedIn</a>
-                    <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">GitHub</a>
-               </div>
-          </section>
+               <!--REPLACE THE TEXT BECAUSE NOT RIGHT -->
+               <section id="contact">
+                    <h2>Looking for my next crew <img src="images/straw-hat.svg" alt="" class="straw-hat"></h2>
+                    <p>If you're looking for a passionate and dedicated BCIS student to join your team, I'd love to hear
+                         from
+                         you! Please feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
+                    <div class="contact-buttons">
+                         <a href="mailto:>?" class="button">Email</a>
+                         <a href="https://www.linkedin.com/in/lancegomez/" target="_blank" class="button">LinkedIn</a>
+                         <a href="https://github.com/lancegomez/portfolio" target="_blank" class="button">GitHub</a>
+                    </div>
+               </section>
 
-          <!-- TODO (Step 8): FOOTER, inside the photo wrapper
+               <!-- TODO (Step 8): FOOTER, inside the photo wrapper
      - © 2026 Lance Gomez · Calgary, AB
      - Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park
 -->
 
-          <footer>
-               <p>© 2026 Lance Gomez · Calgary, AB</p>
-               <p>Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park</p>
-          </footer>
+               <footer>
+                    <p>© 2026 Lance Gomez · Calgary, AB</p>
+                    <p>Photo: Lance Gomez · Valley of the Ten Peaks, Banff National Park</p>
+               </footer>
 
-
-          <!-- TODO (Step 6): close the photo wrapper -->
-
+          </div>
      </main>
 </body>
 

@@ -282,7 +282,7 @@ nav a {
 .project-card {
 
    background-color: var(--paper);
-   border: 1px solid var(--border-soft);
+   border: 1px solid var(--main-text);
    border-radius: 3px;
    box-shadow: var(--shadow-project-card);
    display: flex;
@@ -383,7 +383,7 @@ nav a {
 
 .in-progress .dot {
    
-   background-color: var(--dark-teal);
+   background-color: var(--teal);
    box-shadow: 0 0 0 3px var(--light-teal-tint);
 }
 
@@ -413,7 +413,7 @@ nav a {
 * ==== DOES: smaller and muted grey so it reads as extra info, not the main text ====
 */
 
-.tech-stack {
+.project-card .tech-stack {
 
    font-size: 14px;
    color: var(--muted-text);
@@ -451,7 +451,24 @@ nav a {
    - fade element: height 160px, linear-gradient(to bottom, #F1F4F7, transparent)
 */
 
+.photo-wrap {
 
+   background-image: url("images/rockies-ten-peaks.jpg");
+   background-size: cover;
+   background-position: center 70%;
+}
+
+.fade {
+
+   height: 160px;
+   background: linear-gradient(to bottom, var(--page-background), transparent);
+}
+
+.projects {
+
+   padding-top: 110px;
+   padding-bottom: 110px;
+}
 /* TODO (Step 7): ABOUT CARD
    - paper card with the bigger hard shadow
    - photo circle: 84px, border-radius 50%, 1px dark border, object-fit cover
