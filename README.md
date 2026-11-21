@@ -2,13 +2,11 @@
 
 My personal site, built from a blank file with plain HTML and CSS. No templates, no frameworks.
 
-I'm a 3rd-year BCIS student at Mount Royal University in Calgary, looking for a Spring or Summer 2027 internship.
-
 **Live site:** https://lancegomez.com
 
 ## Why I built it this way
 
-I could've used a site builder, but I wanted to understand every line. So I wrote it myself, one section at a time, and used Claude Code as a tutor to explain concepts and review my code when I got stuck.
+I could've used a site builder, but I wanted to understand every line and use this as a learning experience. So I wrote it myself, and when it came to reviewing and experimenting with different concepts I had the assistance of Claude.
 
 ## Things I learned along the way
 
@@ -21,3 +19,5 @@ I could've used a site builder, but I wanted to understand every line. So I wrot
 ## Photo
 
 The mountain background is a photo I took in the Valley of the Ten Peaks, Banff National Park.
+
+Possible future feature: Images change for every new session
